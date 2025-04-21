@@ -7,8 +7,26 @@ relatedTemplates:
   - nextjs-boilerplate
 ---
 
-# HTML Starter
+# Grillz Builder by Magpollo – 3D Dental Jewelry Landing Page
 
-This is a starter HTML5 templates which is configured with Vercel Analytics (through a `script` tag), advanced routing with [Vercel Edge Middleware](https://vercel.com/docs/concepts/functions/edge-middleware), as well as some basic styles
+This is the landing page for the 3D Grillz Builder by Magpollo, a modern configurator for custom dental jewelry. Let customers design, try on, and order grillz in real time—on your site or in-store.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/html&project-name=html)
+**Live Demo:** [https://3d.magpollo.com](https://3d.magpollo.com)
+
+## Features
+
+- Real-time 3D grillz customization
+- Try-on filter (like Snapchat)
+- Instant pricing updates
+- Mobile-first, clean SaaS design
+- Vercel analytics, Open Graph metadata, and optimized for sharing
+
+## Tech Stack
+
+- HTML5, Tailwind CSS
+- Vercel Analytics
+- ExampleDev new.css (optional extra styling)
+
+---
+
+© 2025 Magpollo. All rights reserved.

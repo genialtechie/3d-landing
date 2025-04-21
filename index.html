@@ -2,97 +2,483 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
     <meta
-      name="description"
-      content="High-performance HTML based website template."
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
     />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
+    <title>
+      Revolutionize Your Custom Dental Jewelry Orders | 3D Configurator
+    </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Using system font stack for Apple-like feel */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+          'Segoe UI Symbol';
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      /* Basic fade-in (can be enhanced later) */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 1s ease-out forwards;
+        opacity: 0;
+      }
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+      .delay-3 {
+        animation-delay: 0.6s;
+      }
+      .delay-4 {
+        animation-delay: 0.8s;
+      }
+    </style>
+    <!-- Open Graph & Twitter Card Metadata -->
+    <meta
+      property="og:title"
+      content="3d jewelry customizer"
+    />
+    <meta
+      property="og:description"
+      content="Let customers design, try on, and order custom dental jewelry in real time."
+    />
+    <meta
+      property="og:image"
+      content="/public/og-image.png"
+    />
+    <meta
+      property="og:url"
+      content="https://3d.magpollo.com"
+    />
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+    <meta
+      name="twitter:title"
+      content="3d jewelry customizer"
+    />
+    <meta
+      name="twitter:description"
+      content="Let customers design, try on, and order custom dental jewelry in real time."
+    />
+    <meta
+      name="twitter:image"
+      content="/public/og-image.png"
+    />
+    <meta
+      name="twitter:url"
+      content="https://3d.magpollo.com"
+    />
+    <script
+      defer
+      src="/_vercel/insights/script.js"
+    ></script>
   </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
+  <body class="bg-white text-gray-700 p-4">
+    <div class="min-h-screen flex flex-col px-2 md:px-8">
+      <!-- BRAND HEADER -->
+      <header
+        class="flex flex-row items-center gap-4 py-8 px-8 w-full border-b border-gray-100"
       >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
+        <img
+          src="public/logo.png"
+          alt="3D Builder Logo"
+          class="h-10"
+          style="max-width: 120px"
+        />
+        <span
+          class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight"
+          style="font-family: 'Inter', sans-serif"
+          >3D Builder</span
+        >
+        <span
+          class="text-base font-medium text-gray-500 ml-2 mt-2 md:mt-0"
+          style="font-family: 'Inter', sans-serif"
+          >by Magpollo</span
+        >
+        <div class="flex-1"></div>
+        <a
+          href="https://magpollo.com"
+          class="text-gray-400 hover:text-blue-600 text-sm font-semibold transition ml-auto hidden md:inline"
+          style="font-family: 'Inter', sans-serif"
+          >magpollo.com</a
+        >
+        <a
+          href="https://twitter.com/magpollotech"
+          class="ml-4 text-gray-400 hover:text-blue-600 text-sm font-semibold transition hidden md:inline"
+          style="font-family: 'Inter', sans-serif"
+          >@magpollotech</a
+        >
+      </header>
+      <!-- HERO SECTION -->
+      <section
+        class="flex-1 flex flex-col justify-center items-center bg-gray-50/80 rounded-3xl shadow-md mt-10 mb-10 px-4 py-12 md:py-20 max-w-4xl mx-auto"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-bold text-gray-900 text-center mb-4 leading-tight"
+        >
+          Grow Your Jewelry Sales
+        </h1>
+        <p
+          class="text-xl md:text-2xl text-gray-600 text-center mb-8 max-w-2xl mx-auto"
+        >
+          Let your customers design, visualize, and price grillz in real time.
+          Upsell. Educate. Convert.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+          <a
+            href="mailto:thehaleembello@gmail.com?subject=Early%20Access%20Request%3A%20Grillz%20Builder%20by%20Magpollo&body=Hi%2C%20I%E2%80%99d%20like%20early%20access%20to%20Grillz%20Builder%20for%20my%20store.%20Please%20send%20more%20info!"
+            class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow hover:bg-blue-700 text-lg transition"
+            >Request Early Access</a
+          >
+          <a
+            href="#cta-link"
+            class="px-8 py-3 bg-white border border-blue-600 text-blue-600 font-semibold rounded-xl shadow hover:bg-blue-50 text-lg transition"
+            >Book a Demo</a
+          >
+        </div>
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+          <div
+            class="flex items-center bg-white rounded-full shadow px-5 py-2 text-gray-700 text-base font-medium gap-2"
+          >
+            <span class="text-green-500">⬆️</span> +50% Avg. Order Value
+          </div>
+          <div
+            class="flex items-center bg-white rounded-full shadow px-5 py-2 text-gray-700 text-base font-medium gap-2"
+          >
+            <span class="text-blue-500">⏱️</span> 2x Faster Order Process
+          </div>
+          <div
+            class="flex items-center bg-white rounded-full shadow px-5 py-2 text-gray-700 text-base font-medium gap-2"
+          >
+            <span class="text-yellow-500">⭐</span> More Upsells
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBHEAD -->
+      <section class="flex flex-col items-center mb-10 fade-in delay-1">
+        <p class="text-xl md:text-2xl text-gray-700 text-center max-w-2xl mb-2">
+          Let customers pick teeth, metal and try it on with instant pricing—on
+          your site or right at the counter.
+        </p>
+      </section>
+
+      <!-- VISUAL SHOWCASE -->
+      <section class="w-full flex flex-col items-center mb-16 fade-in delay-2">
+        <div
+          class="bg-white rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto"
+        >
+          <div class="flex-1 flex flex-col gap-3">
+            <div
+              class="flex flex-row justify-center items-center relative min-h-[220px]"
+            >
+              <img
+                src="public/tablet-ui.png"
+                alt="Dental Jewelry Configurator on Tablet"
+                class="rounded-xl w-full max-w-xs object-contain z-10"
+                style="box-shadow: none; border: none"
+              />
+              <img
+                src="public/mobile-ui.png"
+                alt="Dental Jewelry Configurator on Mobile"
+                class="rounded-xl w-full max-w-[110px] object-contain hidden sm:block absolute -right-[10%] -bottom-5 -translate-x-1/4 z-20"
+                style="box-shadow: none; border: none"
+              />
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col gap-6">
+            <!-- HOW IT WORKS -->
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">How it works</h2>
+            <ol class="space-y-3">
+              <li class="flex items-center gap-3">
+                <span class="text-2xl">🦷</span>
+                <span>Pick tooth or full set</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-2xl">🥇</span>
+                <span>Choose material (gold, silver)</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-2xl">💎</span>
+                <span>Add diamonds or skip stones</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="text-2xl">🤳</span>
+                <span
+                  >Try-on filter camera: See jewelry on yourself—live, like
+                  Snapchat</span
+                >
+              </li>
+            </ol>
+            <div
+              class="flex items-center gap-2 mt-2 text-blue-600 font-semibold text-base"
+            >
+              <span class="text-xl">⚡</span>Price updates in real time
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY IT MATTERS -->
+      <section class="flex flex-col items-center mb-16 fade-in delay-3">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6">Why it matters</h2>
+        <div class="flex flex-col sm:flex-row gap-6">
+          <div
+            class="bg-blue-50/70 rounded-xl px-6 py-5 flex items-center gap-3 text-lg font-medium text-gray-800 min-w-[220px] justify-center"
+          >
+            <span class="text-2xl">💰</span> extra profit per upsell
+          </div>
+          <div
+            class="bg-blue-50/70 rounded-xl px-6 py-5 flex items-center gap-3 text-lg font-medium text-gray-800 min-w-[220px] justify-center"
+          >
+            <span class="text-2xl">⏳</span> cut sales back‑and‑forth
+          </div>
+          <div
+            class="bg-blue-50/70 rounded-xl px-6 py-5 flex items-center gap-3 text-lg font-medium text-gray-800 min-w-[220px] justify-center"
+          >
+            <span class="text-2xl">🔥</span> more engagement = more orders
+          </div>
+        </div>
+      </section>
+
+      <!-- GET STARTED -->
+      <section class="flex flex-col items-center mb-20 fade-in delay-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-4">Get started</h2>
+        <p class="mb-6 text-lg text-gray-600 text-center">
+          Book a 5‑min walkthrough (no tech setup)
+        </p>
+        <a
+          href="#cta-link"
+          class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow hover:bg-blue-700 text-lg transition"
+          >Book a 5‑min Demo</a
+        >
+      </section>
+
+      <!-- Header -->
+      <header class="text-center max-w-3xl mx-auto mb-16 md:mb-24 fade-in">
+        <h1
+          class="text-4xl md:text-6xl font-bold text-gray-900 mb-5 leading-tight"
+        >
+          Stop Losing Jewelry Sales
+        </h1>
+        <p class="text-lg md:text-xl text-gray-500">
+          Empower customers & boost upsells with an interactive 3D configurator
+          your clients will love.
+        </p>
+      </header>
+
+      <!-- Problem Section -->
+      <section class="mb-16 md:mb-24 fade-in delay-1">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-10"
+        >
+          The Old Way Isn't Working
+        </h2>
+        <div
+          class="bg-gray-50 p-8 rounded-xl border border-gray-200 space-y-4 text-gray-600 max-w-3xl mx-auto"
+        >
+          <p>
+            Relying on static forms or endless emails for custom dental jewelry?
+            Customers often don't know the terms ("open face," "iced out") and
+            might:
+          </p>
+          <ul class="list-disc list-outside space-y-2 pl-5">
+            <li>Settle for simpler designs (lost upsells!).</li>
+            <li>Get confused by the complex ordering process.</li>
+            <li>Hesitate without seeing accurate previews or prices.</li>
+            <li>Abandon the purchase due to slow, manual quoting.</li>
+          </ul>
+          <p class="pt-2 font-medium text-gray-700">
+            This friction costs you time, money, and customer satisfaction.
+          </p>
+        </div>
+      </section>
+
+      <!-- Solution Section - Image Focus -->
+      <section class="mb-16 md:mb-24 fade-in delay-2">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-10"
+        >
+          The Solution: Interactive 3D Configuration
+        </h2>
+        <div class="text-center mb-12">
+          <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+            Embed a seamless 3D customizer on your site. Let customers visually
+            explore styles, metals, and gems in real-time, with instant price
+            updates.
+          </p>
+        </div>
+
+        <!-- Visual Showcase -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="text-left space-y-4 pr-4">
+            <h3 class="text-2xl font-semibold text-gray-800">Key Features:</h3>
+            <ul class="list-none space-y-3">
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">✓</span
+                ><span>Real-time 3D visualization of all options.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">✓</span
+                ><span>Instant, dynamic pricing based on selections.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">✓</span
+                ><span>Intuitive interface, easy for anyone to use.</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">✓</span
+                ><span
+                  >Streamlined order submission with visual confirmation.</span
+                >
+              </li>
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">✓</span>
+                <span>Try-on filter: see jewelry on yourself live</span>
+              </li>
+            </ul>
+          </div>
+          <div class="flex justify-center md:justify-end space-x-4">
+            <!-- Clean presentation of UI images -->
+            <img
+              src="public/tryon-ui.png"
+              alt="Try-on Camera Feature (Mobile)"
+              class="rounded-lg w-full max-w-[160px] sm:max-w-[200px] md:max-w-[220px] object-contain mx-auto"
+            />
+            <!-- <img src="public/mobile-ui.png" alt="Dental Jewelry Configurator on Mobile" class="rounded-lg shadow-xl border border-gray-200 w-auto h-96 object-contain hidden md:block"> -->
+            <!-- Optional: Add mobile image back if needed -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section - Simplified -->
+      <section class="mb-16 md:mb-24 fade-in delay-3">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-10"
+        >
+          Why Jewelers Choose Us
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800">
+              Increase Order Value
+            </h3>
+            <p class="text-gray-600">
+              Visually upsell premium options customers didn't know existed.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800">
+              Reduce Sales Friction
+            </h3>
+            <p class="text-gray-600">
+              Instant pricing & previews eliminate delays and guesswork.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800">
+              Educate Customers
+            </h3>
+            <p class="text-gray-600">
+              Make complex choices understandable and exciting.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800">
+              Streamline Orders
+            </h3>
+            <p class="text-gray-600">
+              Receive precise, visually confirmed custom requests.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800">
+              Enhance Brand
+            </h3>
+            <p class="text-gray-600">
+              Offer a modern, high-tech experience that builds trust.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl border border-gray-200">
+            <h3 class="font-semibold text-lg mb-2 text-gray-800">Save Time</h3>
+            <p class="text-gray-600">
+              Minimize back-and-forth communication on order details.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section
+        class="text-center py-12 md:py-16 bg-blue-600 rounded-xl shadow-lg fade-in delay-4"
+      >
+        <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">
+          Ready to Elevate Your Custom Dental Jewelry Business?
+        </h2>
+        <p class="text-lg text-blue-100 mb-8 max-w-xl mx-auto px-4">
+          Integrate the future of custom jewelry sales. Get started today!
+        </p>
+        <a
+          href="#cta-link"
+          class="inline-block bg-white text-blue-600 font-semibold py-3 px-10 rounded-lg shadow-md hover:bg-gray-100 transition duration-200 ease-in-out transform hover:scale-105"
+        >
+          Request Early Access
+        </a>
+      </section>
+
+      <!-- Footer -->
+      <footer
+        class="w-full flex flex-col md:flex-row items-center justify-between gap-4 mt-16 md:mt-24 pt-8 border-t border-gray-200 fade-in delay-5 px-4"
+        style="font-family: 'Inter', sans-serif"
+      >
+        <div class="text-sm text-gray-400 text-center md:text-left">
+          &copy; 2025
+          <a
+            href="https://magpollo.com"
+            class="hover:text-blue-600 transition font-semibold"
+            >Magpollo</a
+          >
+          –
+          <a
+            href="https://3d.magpollo.com"
+            class="hover:text-blue-600 transition font-semibold"
+            >3D Builder</a
+          >
+        </div>
+        <div
+          class="flex items-center justify-center gap-4 text-gray-400 text-sm"
+        >
+          <a
+            href="https://magpollo.com"
+            class="hover:text-blue-600 transition font-semibold"
+            >magpollo.com</a
+          >
+          <span class="hidden md:inline">|</span>
+          <a
+            href="https://twitter.com/magpollotech"
+            class="hover:text-blue-600 transition font-semibold"
+            >@magpollotech</a
+          >
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
