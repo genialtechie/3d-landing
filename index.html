@@ -22,7 +22,7 @@
         -moz-osx-font-smoothing: grayscale;
       }
       /* Basic fade-in (can be enhanced later) */
-      @keyframes fadeIn {
+      @keyframes fadeIn { /* Keep keyframes definition for potential reuse or complex fades */
         from {
           opacity: 0;
         }
@@ -30,28 +30,24 @@
           opacity: 1;
         }
       }
-      .fade-in {
-        animation: fadeIn 1s ease-out forwards;
+      /* Scroll-triggered fade-in */
+      .fade-in-section {
         opacity: 0;
+        transform: translateY(20px); /* Start slightly lower */
+        transition: opacity 0.7s ease-out, transform 0.7s ease-out;
       }
-      .delay-1 {
-        animation-delay: 0.2s;
+
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0); /* Move to final position */
       }
-      .delay-2 {
-        animation-delay: 0.4s;
-      }
-      .delay-3 {
-        animation-delay: 0.6s;
-      }
-      .delay-4 {
-        animation-delay: 0.8s;
-      }
+
       /* Prevent text selection on cards */
       .non-selectable-card {
         -webkit-user-select: none; /* Safari */
-        -moz-user-select: none;    /* Firefox */
-        -ms-user-select: none;     /* Internet Explorer/Edge */
-        user-select: none;         /* Standard */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; /* Standard */
       }
     </style>
     <link
@@ -162,11 +158,6 @@
             class="px-8 py-3 bg-blue-600 text-white font-semibold rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 focus:scale-105 active:scale-95 transition-all duration-200 text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
             >Request Early Access</a
           >
-          <a
-            href="#cta-link"
-            class="px-8 py-3 bg-white border border-blue-600 text-blue-600 font-semibold rounded-xl shadow hover:bg-blue-50 hover:scale-105 focus:scale-105 active:scale-95 transition-all duration-200 text-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
-            >Book a Demo</a
-          >
         </div>
         <div class="flex flex-wrap justify-center gap-6 mt-6">
           <div
@@ -188,7 +179,7 @@
       </section>
 
       <!-- SUBHEAD -->
-      <section class="flex flex-col items-center mb-10 fade-in delay-1">
+      <section class="flex flex-col items-center mb-10 fade-in-section">
         <p class="text-xl md:text-2xl text-gray-700 text-center max-w-2xl mb-2">
           Let customers pick teeth, metal and try it on with instant pricing—on
           your site or right at the counter.
@@ -196,7 +187,7 @@
       </section>
 
       <!-- VISUAL SHOWCASE -->
-      <section class="w-full flex flex-col items-center mb-16 fade-in delay-2">
+      <section class="w-full flex flex-col items-center mb-16 fade-in-section">
         <div
           class="bg-white rounded-2xl shadow-xl p-8 flex flex-col md:flex-row gap-8 items-center max-w-4xl mx-auto"
         >
@@ -252,11 +243,11 @@
       </section>
 
       <!-- WHY IT MATTERS -->
-      <section class="flex flex-col items-center mb-16 fade-in delay-3">
+      <section class="flex flex-col items-center mb-16 fade-in-section">
         <h2 class="text-2xl font-bold text-gray-800 mb-6">Why it matters</h2>
         <div class="flex flex-col sm:flex-row gap-6">
           <div
-            class="bg-blue-50/70 rounded-xl px-6 py-5 flex items-center gap-3 text-lg font-medium text-gray-800 min-w-[220px] justify-center relative group overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 non-selectable-card"
+            class="bg-blue-50/70 rounded-xl px-6 py-5 flex items-center gap-3 text-lg font-medium text-gray-800 min-w-[220px] justify-center relative group cursor-pointer transition-transform duration-300 hover:scale-105 non-selectable-card"
           >
             <span class="text-2xl relative"
               >💰
@@ -419,20 +410,20 @@
       </section>
 
       <!-- GET STARTED -->
-      <section class="flex flex-col items-center mb-20 fade-in delay-4">
+      <section class="flex flex-col items-center mb-20 fade-in-section">
         <h2 class="text-2xl font-bold text-gray-800 mb-4">Get started</h2>
         <p class="mb-6 text-lg text-gray-600 text-center">
           Book a 5‑min walkthrough (no tech setup)
         </p>
         <a
-          href="#cta-link"
-          class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl shadow hover:bg-blue-700 text-lg transition"
-          >Book a 5‑min Demo</a
+          href="mailto:thehaleembello@gmail.com?subject=Early%20Access%20Request%3A%20Grillz%20Builder%20by%20Magpollo&amp;body=Hi%2C%20I%E2%80%99d%20like%20early%20access%20to%20Grillz%20Builder%20for%20my%20store.%20Please%20send%20more%20info!"
+          class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-200 ease-in-out transform hover:scale-105"
+          >Book a Demo</a
         >
       </section>
 
       <!-- Header -->
-      <header class="text-center max-w-3xl mx-auto mb-16 md:mb-24 fade-in">
+      <header class="text-center max-w-3xl mx-auto mb-16 md:mb-24 fade-in-section">
         <h1
           class="text-4xl md:text-6xl font-bold text-gray-900 mb-5 leading-tight"
         >
@@ -445,7 +436,7 @@
       </header>
 
       <!-- Problem Section -->
-      <section class="mb-16 md:mb-24 fade-in delay-1">
+      <section class="mb-16 md:mb-24 fade-in-section">
         <h2
           class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-10"
         >
@@ -472,7 +463,7 @@
       </section>
 
       <!-- Solution Section - Image Focus -->
-      <section class="mb-16 md:mb-24 fade-in delay-2">
+      <section class="mb-16 md:mb-24 fade-in-section">
         <h2
           class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-10"
         >
@@ -565,7 +556,7 @@
       </section>
 
       <!-- Benefits Section - Simplified -->
-      <section class="mb-16 md:mb-24 fade-in delay-3">
+      <section class="mb-16 md:mb-24 fade-in-section">
         <h2
           class="text-3xl md:text-4xl font-semibold text-center text-gray-800 mb-10"
         >
@@ -683,7 +674,7 @@
 
       <!-- Call to Action Section -->
       <section
-        class="text-center py-12 md:py-16 bg-blue-600 rounded-xl shadow-lg fade-in delay-4"
+        class="text-center py-12 md:py-16 bg-blue-600 rounded-xl shadow-lg fade-in-section"
       >
         <h2 class="text-3xl md:text-4xl font-semibold text-white mb-4">
           Ready to Elevate Your Custom Dental Jewelry Business?
@@ -692,7 +683,7 @@
           Integrate the future of custom jewelry sales. Get started today!
         </p>
         <a
-          href="#cta-link"
+          href="mailto:thehaleembello@gmail.com?subject=Early%20Access%20Request%3A%20Grillz%20Builder%20by%20Magpollo&amp;body=Hi%2C%20I%E2%80%99d%20like%20early%20access%20to%20Grillz%20Builder%20for%20my%20store.%20Please%20send%20more%20info!"
           class="inline-block bg-white text-blue-600 font-semibold py-3 px-10 rounded-lg shadow-md hover:bg-gray-100 transition duration-200 ease-in-out transform hover:scale-105"
         >
           Request Early Access
@@ -701,7 +692,7 @@
 
       <!-- Footer -->
       <footer
-        class="w-full flex flex-col md:flex-row items-center justify-between gap-4 mt-16 md:mt-24 pt-8 border-t border-gray-200 fade-in delay-5 px-4"
+        class="w-full flex flex-col md:flex-row items-center justify-between gap-4 mt-16 md:mt-24 pt-8 border-t border-gray-200 fade-in-section px-4"
         style="font-family: 'Inter', sans-serif"
       >
         <div class="text-sm text-gray-400 text-center md:text-left">
@@ -715,7 +706,7 @@
           <a
             href="https://3d.magpollo.com"
             class="hover:text-blue-600 transition font-semibold"
-            >3D Builder</a
+            >3D Grillz</a
           >
         </div>
         <div
@@ -735,5 +726,45 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const sectionsToFade = document.querySelectorAll('.fade-in-section');
+
+        if ('IntersectionObserver' in window) {
+          const observerOptions = {
+            root: null, // relative to document viewport
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+          };
+
+          const observerCallback = (entries, observer) => {
+            entries.forEach(entry => {
+              // Check if the element is intersecting (visible)
+              if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Optional: Stop observing the element after it has become visible
+                observer.unobserve(entry.target);
+              }
+            });
+          };
+
+          const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+          // Observe each section
+          sectionsToFade.forEach(section => {
+            observer.observe(section);
+          });
+
+        } else {
+          // Fallback for browsers that don't support IntersectionObserver
+          // Simply make all sections visible immediately
+          sectionsToFade.forEach(section => {
+            section.classList.add('is-visible'); // Add the class to remove transform/opacity
+          });
+        }
+      });
+    </script>
+
   </body>
 </html>
