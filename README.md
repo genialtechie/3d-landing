@@ -11,7 +11,7 @@ relatedTemplates:
 
 This is the landing page for the 3D Grillz Builder by Magpollo, a modern configurator for custom dental jewelry. Let customers design, try on, and order grillz in real time—on your site or in-store.
 
-**Live Demo:** [https://3d.magpollo.com](https://3d.magpollo.com)
+**Live Demo:** [https://grillz.magpollo.com/](https://grillz.magpollo.com/)
 
 ## Features
 
